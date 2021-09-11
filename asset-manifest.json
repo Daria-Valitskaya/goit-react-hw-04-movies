@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/css/main.14507795.chunk.css",
+    "main.js": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/main.a003570f.chunk.js",
+    "main.js.map": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/main.a003570f.chunk.js.map",
+    "runtime-main.js": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/runtime-main.6af259d7.js",
+    "runtime-main.js.map": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/runtime-main.6af259d7.js.map",
+    "static/js/2.688fa7ea.chunk.js": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/2.688fa7ea.chunk.js",
+    "static/js/2.688fa7ea.chunk.js.map": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/2.688fa7ea.chunk.js.map",
+    "static/js/3.b037e5d7.chunk.js": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/3.b037e5d7.chunk.js",
+    "static/js/3.b037e5d7.chunk.js.map": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/3.b037e5d7.chunk.js.map",
+    "index.html": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/index.html",
+    "static/css/main.14507795.chunk.css.map": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/css/main.14507795.chunk.css.map",
+    "static/js/2.688fa7ea.chunk.js.LICENSE.txt": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/js/2.688fa7ea.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/Daria-Valitskaya.github.io/goit-react-hw-04-movies/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6af259d7.js",
+    "static/js/2.688fa7ea.chunk.js",
+    "static/css/main.14507795.chunk.css",
+    "static/js/main.a003570f.chunk.js"
+  ]
+}
