@@ -1,0 +1,19 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #071739;
+  text-shadow: 4px 4px 12px rgb(185, 213, 253, 0.3);
+}
+
+.activeLink {
+  composes: link;
+  color: #709fdc;
+}
+.header {
+  border-bottom: 1px solid #274684;
+}
+
+/* #b9d5fd */
