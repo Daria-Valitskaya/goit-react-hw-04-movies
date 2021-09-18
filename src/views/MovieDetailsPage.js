@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Route, useRouteMatch } from "react-router-dom";
 import { fetchFullInfo } from "../Services/ApiServis";
+import Cast from "./Cast";
+import Reviews from "./Reviews";
 
 export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
-
+  const { path } = useRouteMatch();
   useEffect(() => {
     fetchFullInfo(movieId).then((response) => {
       setMovie(response);
@@ -26,11 +28,21 @@ export default function MovieDetailsPage() {
             <p>{movie.tagline}</p>
             <h3> Gengers:</h3>
             <p>{movie.genres.map((genre) => genre.name).join(" , ")}</p>
-            <h2>Description:</h2>
+            <h3>Description:</h3>
             <p>{movie.overview}</p>
           </div>
         </>
       )}
+      <hr />
+      <Route path={`${path}`}>
+        <Cast />
+      </Route>
+      <Route path={`${path}`}>
+        <Reviews />
+      </Route>
     </>
   );
 }
+
+// /movies/:movieId/reviews
+// /movies/:movieId/cast

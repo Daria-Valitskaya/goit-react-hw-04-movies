@@ -14,12 +14,15 @@ export default function HomePage() {
   return (
     <>
       <h1>Top of the day</h1>
-      {movies &&
-        movies.map((movie) => (
-          <li key={movie.id}>
-            <Link to={`${url}movies/${movie.id}`}>{movie.title}</Link>
-          </li>
-        ))}
+      {movies && (
+        <ul>
+          {movies.map((movie) => (
+            <li key={movie.id}>
+              <Link to={`${url}movies/${movie.id}`}>{movie.title}</Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 }
