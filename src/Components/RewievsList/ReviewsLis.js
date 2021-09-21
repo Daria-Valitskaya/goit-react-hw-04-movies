@@ -5,7 +5,11 @@ export default function ReviewsList({ reviews }) {
     <ul>
       {reviews.map((feedback) => (
         <li key={feedback.id}>
-          {feedback.author !== "" ? <p>{feedback.author}</p> : <p>Incognito</p>}
+          {feedback.author !== "" ? (
+            <h3>{feedback.author}</h3>
+          ) : (
+            <h3>Incognito</h3>
+          )}
           <p>{feedback.content}</p>
         </li>
       ))}

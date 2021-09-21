@@ -12,6 +12,7 @@ import { lazy, Suspense } from "react";
 import MyLoader from "../Components/Loader/MyLoader";
 import Section from "../Components/Section/Section";
 import Button from "../Components/Button/Button";
+import s from "./MovieDetails.module.css";
 const Cast = lazy(() => import("./Cast" /* webpackChunkName: "Cast" */));
 const Reviews = lazy(() =>
   import("./Reviews" /* webpackChunkName: "Reviews" */)
@@ -41,19 +42,22 @@ export default function MovieDetailsPage() {
               Go back
             </Button>
           </div>
-          <div>
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              alt={movie.title}
-            />
-          </div>
-          <div>
-            <h2>{movie.title}</h2>
-            <p>{movie.tagline}</p>
-            <h3> Gengers:</h3>
-            <p>{movie.genres.map((genre) => genre.name).join(" , ")}</p>
-            <h3>Description:</h3>
-            <p>{movie.overview}</p>
+          <div className={s.DetailsView}>
+            <div className={s.ImageWrapper}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                alt={movie.title}
+                width={300}
+              />
+            </div>
+            <div>
+              <h2>{movie.title}</h2>
+              <p>{movie.tagline}</p>
+              <h3> Gengers:</h3>
+              <p>{movie.genres.map((genre) => genre.name).join(" , ")}</p>
+              <h3>Description:</h3>
+              <p>{movie.overview}</p>
+            </div>
           </div>
         </>
       )}
@@ -61,6 +65,7 @@ export default function MovieDetailsPage() {
       <div>
         <Section>
           <NavLink
+            className={s.link}
             to={{
               pathname: `${url}/cast`,
               state: { from: location?.state?.from ?? "/" },
@@ -71,6 +76,7 @@ export default function MovieDetailsPage() {
         </Section>
         <Section>
           <NavLink
+            className={s.link}
             to={{
               pathname: `${url}/reviews`,
               state: { from: location?.state?.from ?? "/" },

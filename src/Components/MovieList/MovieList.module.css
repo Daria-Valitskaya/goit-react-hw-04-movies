@@ -1,0 +1,13 @@
+.MovieLink {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.MovieLink:hover,
+.MovieLink:focus {
+  color: #b9d5fd;
+  border-bottom: 1px solid #274684;
+  background: #274684;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

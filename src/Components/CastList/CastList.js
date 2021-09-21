@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import zagluhka from "./zaglushka.jpg";
+import s from "./CastList.module.css";
 
 export default function CastList({ cast }) {
   return (
-    <ul>
+    <ul className={s.CastList}>
       {cast.map((actor) => (
         <li key={actor.id}>
           {actor.profile_path !== null ? (
