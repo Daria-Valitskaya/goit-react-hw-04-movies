@@ -11,6 +11,7 @@ import { fetchFullInfo } from "../Services/ApiServis";
 import { lazy, Suspense } from "react";
 import MyLoader from "../Components/Loader/MyLoader";
 import Section from "../Components/Section/Section";
+import Button from "../Components/Button/Button";
 const Cast = lazy(() => import("./Cast" /* webpackChunkName: "Cast" */));
 const Reviews = lazy(() =>
   import("./Reviews" /* webpackChunkName: "Reviews" */)
@@ -36,9 +37,9 @@ export default function MovieDetailsPage() {
       {movie && (
         <>
           <div>
-            <button type="button" onClick={onGoBack}>
+            <Button onClick={onGoBack} type={"button"}>
               Go back
-            </button>
+            </Button>
           </div>
           <div>
             <img

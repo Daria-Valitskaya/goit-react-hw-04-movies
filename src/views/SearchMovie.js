@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import Button from "../Components/Button/Button";
 
 export default function SearchMovie({ onSubmit }) {
   const [movieName, setMovieName] = useState("");
@@ -29,8 +30,9 @@ export default function SearchMovie({ onSubmit }) {
         placeholder="Search movies"
         value={movieName}
         onChange={onInputChange}
+        className="SearchForm-input"
       />
-      <button type="submit"> Search</button>
+      <Button type={"submit"}>Search</Button>
     </form>
   );
 }
