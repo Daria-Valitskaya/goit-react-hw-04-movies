@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
 import { fetchMovieReviews } from "../Services/ApiServis";
 import ReviewsList from "../Components/RewievsList/ReviewsLis";
 // import PropTypes from "prop-types";

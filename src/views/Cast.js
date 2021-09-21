@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
 import { fetchMovieCast } from "../Services/ApiServis";
 
 // import PropTypes from "prop-types";
