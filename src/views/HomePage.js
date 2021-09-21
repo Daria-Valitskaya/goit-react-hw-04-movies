@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link, useRouteMatch } from "react-router-dom";
 import { fetchTrendingMovie } from "../Services/ApiServis";
+import MovieList from "../Components/MovieList/MovieList";
+import Section from "../Components/Section/Section";
 
 export default function HomePage() {
   const [movies, setMovies] = useState(null);
-  const { url } = useRouteMatch();
 
   useEffect(() => {
     fetchTrendingMovie().then((response) => {
@@ -12,17 +12,9 @@ export default function HomePage() {
     });
   }, []);
   return (
-    <>
+    <Section>
       <h1>Top of the day</h1>
-      {movies && (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={`${url}movies/${movie.id}`}>{movie.title}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </>
+      {movies && <MovieList movies={movies} />}
+    </Section>
   );
 }

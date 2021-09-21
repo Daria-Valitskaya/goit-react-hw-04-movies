@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-// import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import { fetchByKeyword } from "../Services/ApiServis";
 import SearchMovie from "./SearchMovie";
+import MovieList from "../Components/MovieList/MovieList";
+import Section from "../Components/Section/Section";
 
 export default function MoviePage() {
   const [movies, setMovies] = useState(null);
@@ -27,17 +27,9 @@ export default function MoviePage() {
     setMovieName(movieName);
   };
   return (
-    <>
+    <Section>
       <SearchMovie onSubmit={searchMovieByKeyword} />
-      {movies && (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </>
+      {movies && <MovieList movies={movies} />}
+    </Section>
   );
 }
