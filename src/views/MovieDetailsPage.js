@@ -31,7 +31,7 @@ export default function MovieDetailsPage() {
     });
   }, [movieId]);
   const onGoBack = () => {
-    history.push(location?.state?.from?.location ?? "/");
+    history.push(location?.state?.from ?? "/");
   };
   return (
     <Section>
